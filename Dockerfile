@@ -14,6 +14,9 @@ RUN gem install bundler
 
 # Install NodeJS
 RUN apt-get -y install nodejs
+RUN npm cache clean -f
+RUN npm install -g n
+RUN n stable
 
 # Install Dependencies
 RUN apt-get -y install \
